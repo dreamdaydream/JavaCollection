@@ -8,7 +8,7 @@ import java.util.List;
 import static org.fest.assertions.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
-public class ReduceTest {
+public class ReduceTest implements SingleLink{
 
     @Test
     public void should_get_maximum_of_list() {
@@ -138,5 +138,15 @@ public class ReduceTest {
         Reduce reduce = new Reduce(arrayList);
         assertThat(reduce.isEqual(arrayList)).isEqualTo(true);
         assertThat(reduce.isEqual(differentArrayList)).isEqualTo(false);
+    }
+
+    @Override
+    public void addTailPointer(Object item) {
+
+    }
+
+    @Override
+    public Object getNode(int index) {
+        return null;
     }
 }
