@@ -75,15 +75,15 @@ public class Reduce {
 
     public Double getMedianInLinkList(SingleLink singleLink) {
 
+
+        arrayList.forEach(singleLink::addTailPointer);
         int length = this.arrayList.size();
         double median = 0.0;
         if (length%2==0){
-           singleLink.getNode(length/2);
-           singleLink.getNode(length/2+1);
-           median = ((double)singleLink.getNode(length/2)+(double)singleLink.getNode(length/2+1))/2;
+           median = ((Integer)singleLink.getNode(length/2)+(Integer) singleLink.getNode(length/2+1))/2.0;
         }
         else{
-            median=(double)singleLink.getNode((length+1)/2);
+            median=(Integer)singleLink.getNode((length+1)/2);
         }
         return median;
     }

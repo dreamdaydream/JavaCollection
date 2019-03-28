@@ -31,8 +31,7 @@ public class MyMap {
 
     public List<String> mapLetters() {
 
-        List<String> result = array.stream().map(item ->getLetter(item)).collect(Collectors.toList());
-        return result;
+        return array.stream().map(item ->getLetter(item)).collect(Collectors.toList());
     }
 
     public String getLetter(int num){
@@ -44,7 +43,7 @@ public class MyMap {
                 point=26;
                 num=num-1;
             }
-            letters = letterList.get(point-1)+letters;
+            letters = letterList.get(point-1) + letters;
             num=num/26;
         }
         letters=letterList.get(num-1)+letters;
